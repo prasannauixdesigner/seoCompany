@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>seomy company</title>
+    <!--Bootstrap Links-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome Links-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap");
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  line-height: 1.5;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 400;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  
+}
+:before,
+:after {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.v-center {
+  align-items: center;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+/* header */
+.header {
+  display: block;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  padding: 15px;
+  background-color: #E4ECF8;
+}
+.header .item-left {
+  flex: 0 0 17%;
+}
+.header .logo a {
+  font-size: 30px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+}
+.header .item-center {
+  flex: 0 0 66%;
+}
+.header .item-right {
+  flex: 0 0 17%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header .item-right a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #555555;
+  display: inline-block;
+  margin-left: 10px;
+  transition: color 0.3s ease;
+}
+.header .menu > ul > li {
+  display: inline-block;
+  line-height: 50px;
+  margin-left: 25px;
+}
+.header .menu > ul > li > a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  position: relative;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+.header .menu > ul > li .sub-menu {
+  position: absolute;
+  z-index: 500;
+  background-color: #ffffff;
+  box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  transition: all 0.5s ease;
+  margin-top: 25px;
+  opacity: 0;
+  visibility: hidden;
+}
+@media (min-width: 992px) {
+  .header .menu > ul > li.menu-item-has-children:hover .sub-menu {
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.header .menu > ul > li .sub-menu > ul > li {
+  line-height: 1;
+}
+.header .menu > ul > li .sub-menu > ul > li > a {
+  display: inline-block;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #555555;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.header .menu > ul > li .single-column-menu {
+  min-width: 280px;
+  max-width: 350px;
+}
+.header .menu > ul > li .sub-menu.mega-menu > .list-item > ul > li {
+  line-height: 1;
+  display: block;
+}
+.header .menu > ul > li .sub-menu.mega-menu > .list-item > ul > li > a {
+  padding: 10px 0;
+  display: inline-block;
+  font-size: 16px;
+  color: #555555;
+  transition: color 0.3s ease;
+}
+.header .menu > ul > li .sub-menu.mega-menu {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header .menu > ul > li .sub-menu.mega-menu-column-4 {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 15px;
+}
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item {
+  flex: 0 0 25%;
+  padding: 0 15px;
+}
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item .title {
+  font-size: 16px;
+  color: #ea4636;
+  font-weight: 500;
+  line-height: 1;
+  padding: 10px 0;
+}
+.header
+  .menu
+  > ul
+  > li
+  .sub-menu.mega-menu-column-4
+  > .list-item.text-center
+  .title {
+  text-align: center;
+}
+.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img {
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  margin-top: 10px;
+}
+.header .menu > ul > li .sub-menu.mega-menu > .list-item > ul > li > a:hover,
+.header .menu > ul > li .sub-menu > ul > li > a:hover,
+.header .item-right a:hover,
+.header .menu > ul > li:hover > a {
+  color: #ea4636;
+}
+
+.mobile-menu-head,
+.mobile-menu-trigger {
+  display: none;
+}
+
+/*responsive*/
+@media (max-width: 576px) {
+  .header .item-center {
+    order: 3;
+    flex: 0 0 100%;
+  }
+  .header .item-left,
+  .header .item-right {
+    flex: 0 0 auto;
+  }
+  .v-center {
+    justify-content: space-between;
+  }
+  .header .mobile-menu-trigger {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .mobile-menu-trigger span {
+    display: block;
+    height: 2px;
+    background-color: #333333;
+    width: 24px;
+    position: relative;
+  }
+  .header .mobile-menu-trigger span:before,
+  .header .mobile-menu-trigger span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+  }
+  .header .mobile-menu-trigger span:before {
+    top: -6px;
+  }
+  .header .mobile-menu-trigger span:after {
+    top: 6px;
+  }
+  .header .item-right {
+    align-items: center;
+  }
+
+  .header .menu {
+    position: fixed;
+    width: 320px;
+    background-color: #ffffff;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    transform: translate(-100%);
+    transition: all 0.5s ease;
+    z-index: 1099;
+  }
+  .header .menu.active {
+    transform: translate(0%);
+  }
+  .header .menu > ul > li {
+    line-height: 1;
+    margin: 0;
+    display: block;
+  }
+  .header .menu > ul > li > a {
+    line-height: 50px;
+    height: 50px;
+    padding: 0 50px 0 15px;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .header .menu > ul > li > a i {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 50px;
+    transform: rotate(-90deg);
+  }
+  .header .menu .mobile-menu-head {
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 501;
+    position: sticky;
+    background-color: #ffffff;
+    top: 0;
+  }
+  .header .menu .mobile-menu-head .go-back {
+    height: 50px;
+    width: 50px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    display: none;
+  }
+  .header .menu .mobile-menu-head.active .go-back {
+    display: block;
+  }
+  .header .menu .mobile-menu-head .current-menu-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+  }
+  .header .menu .mobile-menu-head .mobile-menu-close {
+    height: 50px;
+    width: 50px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    line-height: 50px;
+    text-align: center;
+    color: #000000;
+    font-size: 25px;
+  }
+  .header .menu .menu-main {
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .header .menu > ul > li .sub-menu.mega-menu,
+  .header .menu > ul > li .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    box-shadow: none;
+    margin: 0;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+    max-width: none;
+    min-width: auto;
+    display: none;
+    transform: translateX(0%);
+    overflow-y: auto;
+  }
+  .header .menu > ul > li .sub-menu.active {
+    display: block;
+  }
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slideRight {
+    0% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+    100% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+  .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item img {
+    margin-top: 0;
+  }
+  .header
+    .menu
+    > ul
+    > li
+    .sub-menu.mega-menu-column-4
+    > .list-item.text-center
+    .title {
+    margin-bottom: 20px;
+  }
+  .header
+    .menu
+    > ul
+    > li
+    .sub-menu.mega-menu-column-4
+    > .list-item.text-center:last-child
+    .title {
+    margin-bottom: 0px;
+  }
+  .header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item {
+    flex: 0 0 100%;
+    padding: 0px;
+  }
+  .header .menu > ul > li .sub-menu > ul > li > a,
+  .header .menu > ul > li .sub-menu.mega-menu > .list-item > ul > li > a {
+    display: block;
+  }
+  .header .menu > ul > li .sub-menu.mega-menu > .list-item > ul {
+    margin-bottom: 15px;
+  }
+  .menu-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1098;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .menu-overlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* /*case study Section*/
+#case-study {
+  margin: -250px 0 0 0;
+}
+.blog-section-head{
+    margin: 0 0 0 155px;
+}
+.blog-section-head p {
+  font-size: 20px;
+  color: purple;
+  font-weight: bold;
+}
+.blog-section-head h1 {
+  font-size: 45px;
+  font-weight: bold;
+  display: inline-block;
+  
+}
+.blog-section-head button {
+  font-size: 16px;
+  color: white;
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: #75489f;
+  border-radius: 25px;
+  float: right;
+}
+.blog_heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.blog-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.blog_box {
+  width: 360px;
+  height: fit-content;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 18px;
+  border: none;
+  outline: none;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.blog_box:hover {
+  
+  transition: 0.3s;
+}
+.blogtext-head {
+  display: flex;
+  gap: 15px;
+}
+.blog-text small {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.blog_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.blog_img:hover {
+  transform: scale(1.02) skewX(-3deg);
+}
+.blog-text {
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+}
+.blog-text span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.blog-text .blog-head {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+.blog-text .blog-head:hover {
+  color: purple;
+}
+.blog-desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.blog-text a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #333;
+}
+.blog-text a:hover {
+  text-decoration: none;
+  color: #f80404;
+}
+.blog-btn {
+  font-size: 16px;
+  font-weight: 400;
+  width: 130px;
+  height: 40px;
+  border-radius: 25px;
+  border: none;
+  color: #ffffff;
+  background-color: blueviolet;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+.blog-btn:hover {
+  transform: scale(1.05);
+}
+@media (max-width:990px) {
+    #case-study{
+        margin: -550px 35px 0 10px;
+    }
+    .blog-section-head{
+        margin-left: 80px;
+    }
+    .blog-section-head p{
+        font-size: 22px;
+    }
+    .blog-section-head h1{
+        font-size: 45px;
+        max-width: 550px;
+        margin-bottom: 20px;
+    }
+    .blog-section-head button{
+        float: left;
+    }
+    .blog-container{
+        margin: 60px -10px 0 22px;
+    }
+} 
+/* Footer */
+.footer{
+    margin: 120px 0 0 0;
+    background-color: #fafafa;
+    padding: 50px;
+}
+#footer-logo{
+    width: 120px;
+    margin: 0 0 0 0;
+}
+
+.footer .section-container{
+    display: flex;
+    gap: 15px;
+}
+.footer .section-container p{
+    max-width: 250px;
+}
+.footer .col{
+    width: 25%;
+    
+}
+.footer h3{
+    font-size: 25px;
+    color: purple;
+    font-weight: bold;
+}
+
+.footer .col ul {
+    list-style: none;
+    padding: 0;
+}
+.footer .col ul li{
+    padding: 10px 0 0 0;
+}
+.footer .col ul a{
+    color: black;
+    font-weight: 400; 
+    font-size: 16px;
+    margin: 10px 0;
+}
+.footer .col a:hover{
+    color: purple;
+    font-weight: bold;
+}
+.footer .icon-link{
+    display: flex;
+    align-items: center;
+}
+
+.footer .icon-link img{
+    width: 24px;
+    margin: 8px 16px;
+}
+.email-head p{
+    font: 28px;
+    font-weight: bold;
+    color: purple;
+}
+.email-head h5{
+    font: 30px;
+    font-weight: bold;
+    
+}
+.email-container input {
+    border: 1px solid #ccc9c9;
+    padding: 8px;
+    border-radius: 15px;
+    width: 280px;
+}
+.email-container input:focus {
+    border:none;
+    padding: 8px;
+    border-radius: 15px;
+    width: 280px;
+}
+.email-container input:focus:invalid {
+  outline: none;
+    border:red 2px solid;
+    padding: 8px;
+    border-radius: 15px;
+    width: 280px;
+}
+.social-connect i{
+  margin: 0 4px;
+}
+@media only screen and (max-width: 768px) {
+   .footer{
+    margin-top: 20px;
+   }
+    .footer .section-container {
+        flex-wrap: wrap;
+    }
+
+    .footer .col {
+        width: 62%;
+        margin: 5px 0 0 0;
+    }
+    .footer .col .quick-links-footer a {
+        font-size: 18px;
+        max-width: 450px;
+    }
+    .footer .col .service-list-footer a {
+        font-size: 18px;
+        max-width: 450px;
+    }
+    .footer .col h3 {
+        font-size: 25px;
+    }
+    .footer .section-container p {
+        font-size: 22px;
+        width: 100%;
+        max-width: 700px;
+    }
+    
+    #footer-logo {
+        width: 70px;
+    }
+
+    .footer .icon-link img {
+        width: 18px;
+    }
+    .email-container{
+      margin-top: 20px;
+    }
+    .email-container input{
+      width: 300px;
+    }
+    .email-head h5 {
+      font-size: 28px;
+      line-height: 35px;
+    }
+    .email-head p {
+      font-size: 20px;
+    }
+    .social-connect i{
+      margin: 0 4px 20px 0;
+    }
+html,
+body {
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+}
+
+/*About Section*/
+#About{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  margin: -30px 70px 100px 80px;
+}
+.About-Image{
+  width: 900px;
+  height: 600px;
+  margin: -400px 0 0 -300px;
+  z-index: 99;
+}
+
+@media (max-width:990px) {
+  
+  #banner h2{
+    margin-left: -60px;
+    font-size: 45px;
+  }
+  .About-Image{
+    position: absolute;
+    left: 20px;
+    z-index: 100;
+    margin: -650px 0 0 0;
+    width: 380px;
+    height: 380px;
+    z-index: -1;
+  }
+  #About .section-head{
+    margin: 80px 0 25px -120px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  #About .section-head h1{
+    margin: -30px 0 50px 0;
+    font-size: 25px;
+  }
+  #contact .section-head{
+    margin: -150px 0 0 -125px;
+  }
+  .contact-info{
+    margin-left: -125px;
+  }
+  .contact-container{
+    max-width: 360px;
+    
+  }
+  .circle_contact{
+    margin: 50px 0;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <!-- header start -->
+    <header class="header">
+      <div class="container">
+        <div class="row v-center">
+          <div class="header-item item-left">
+            <div class="logo">
+              <a href="#"><img src="../Assets/Logo.png" alt="" /></a>
+            </div>
+          </div>
+          <!-- menu start here -->
+          <div class="header-item item-center">
+            <div class="menu-overlay"></div>
+            <nav class="menu">
+              <div class="mobile-menu-head">
+                <div class="go-back"><i class="fa fa-angle-left"></i></div>
+                <div class="current-menu-title"></div>
+                <div class="mobile-menu-close">&times;</div>
+              </div>
+              <ul class="menu-main">
+                <li>
+                  <a href="../index.html">Home</a>
+                </li>
+                <li>
+                  <a href="./About.html">About</a>
+                </li>
+                <li class="menu-item-has-children">
+                  <a href="#">Service <i class="fas fa-angle-down"></i></a>
+                  <div class="sub-menu single-column-menu">
+                    <ul>
+                      <li><a href="./Service_Single.html">SEO Analysis</a></li>
+                      <li><a href="./Service_Single.html">Link Building</a></li>
+                      <li><a href="./Service_Single.html">SEO Audit</a></li>
+                      <li><a href="./Service_Single.html">Keyword Research</a></li>
+                      <li><a href="./Service_Single.html">Content Marketing</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="./Blog.html">Blog</a>
+                </li>
+                <li>
+                  <a href="./Contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- menu end here -->
+          <div class="header-item item-right">
+            <a href="https://www.facebook.com"
+              ><i class="fab fa-facebook fa-lg" style="color: #000"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fab fa-instagram fa-lg" style="color: #000"></i
+            ></a>
+            <a href="https://www.linkedin.com"
+              ><i class="fab fa-linkedin fa-lg" style="color: #000"></i
+            ></a>
+            <a href="https://www.twitter.com"
+              ><i class="fab fa-twitter fa-lg" style="color: #000"></i
+            ></a>
+            <!-- mobile menu trigger -->
+            <div class="mobile-menu-trigger">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+    <!--Banner Section-->
+    <div id="banner" style="background: #E4ECF8; height: 90vh;position: relative; width: 100%; display: flex;
+     justify-content: flex-start;align-items: flex-start;text-align: center;top: 0; z-index: -1;
+     margin-bottom: -20px;"
+    >
+      <div class="section-container">
+        <img src="Assets/Banner.png" alt="" />
+        <div class="content col-12 mx-5 px-5 text-center">
+          <h2 style="font-size: 60px; font-weight: bold; line-height: 270px;">Our Blog</h2>
+          
+        </div>
+      </div>
+    </div>
+    <!--Banner Section Ends -->
+    <!--Blog Section-->
+    <section id="case-study">  
+            <div class="blog-section-head">
+              
+              <h1>Our Recent Post Update</h1>
+            </div>
+            <div class="blog-container">
+                <div class="row">
+                    <div class="blog_box col-lg-4 col-md-4 col-12">
+                        <div class="blog_img">
+                            <img src="../Assets/Blog-1_home.png" class="blog_img my-2">
+                        </div>
+                        <div class="blog-text">
+                          <div class="blogtext-head">
+                            <small>SEO Analytics</small> <small>Marketing</small> 
+                          </div>
+                            <span>04 June 2023 / 16 Comment</span>
+                           <a href="./Service_Single.html">
+                                <p class="blog-head my-2">The importance of making content right now</p>
+                            </a> 
+                        </div>
+                    </div>
+
+                    <div class="blog_box col-lg-4 col-md-4 col-12">
+                        <div class="blog_img">
+                            <img src="../Assets/Blog_2 - home.png" class="img-fluid my-2">
+                        </div>
+                        <div class="blog-text">
+                          <div class="blogtext-head">
+                            <small>SEO Analytics</small> <small>Marketing</small> 
+                          </div>
+                            <span>04 June 2023 / 16 Comment</span>
+                            <a href="./Service_Single.html">
+                                <p class="blog-head my-2">How to Build Trust Online & Become an Authoritative</p>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="blog_box col-lg-4 col-md-4 col-12">
+                        <div class="blog_img">
+                            <img src="../Assets/Blog-3_home.png" width="380" class="img-fluid my-2">
+                        </div>
+                        <div class="blog-text">
+                          <div class="blogtext-head">
+                            <small>SEO Analytics</small> <small>Marketing</small> 
+                          </div>
+                            <span>04 June 2023 / 16 Comment</span>
+                            
+                            <a href="./Service_Single.html">
+                                <p class="blog-head my-2">What Should an Inbound Marketing Campaign</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="blog_box col-lg-4 col-md-4 col-12">
+                        <div class="blog_img">
+                            <img src="../Assets/Blog-1_home.png" class="img-fluid my-2">
+                        </div>
+                        <div class="blog-text">
+                          <div class="blogtext-head">
+                            <small>SEO Analytics</small> <small>Marketing</small> 
+                          </div>
+                            <span>04 June 2023 / 16 Comment</span>
+                           <a href="./Service_Single.html">
+                                <p class="blog-head my-2">The importance of making content right now</p>
+                            </a> 
+                        </div>
+                    </div>
+
+                    <div class="blog_box col-lg-4 col-md-4 col-12">
+                        <div class="blog_img">
+                            <img src="../Assets/Blog_2 - home.png" class="img-fluid my-2">
+                        </div>
+                        <div class="blog-text">
+                          <div class="blogtext-head">
+                            <small>SEO Analytics</small> <small>Marketing</small> 
+                          </div>
+                            <span>04 June 2023 / 16 Comment</span>
+                            <a href="./Service_Single.html">
+                                <p class="blog-head my-2">How to Build Trust Online & Become an Authoritative</p>
+                            </a>
+                            
+                        </div>
+                    </div>
+
+                    <div class="blog_box col-lg-4 col-md-4 col-12">
+                        <div class="blog_img">
+                            <img src="../Assets/Blog-3_home.png" width="380" class="img-fluid my-2">
+                        </div>
+                        <div class="blog-text">
+                          <div class="blogtext-head">
+                            <small>SEO Analytics</small> <small>Marketing</small> 
+                          </div>
+                            <span>04 June 2023 / 16 Comment</span>
+                            
+                            <a href="./Service_Single.html">
+                                <p class="blog-head my-2">What Should an Inbound Marketing Campaign</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    
+    
+
+       
+
+        <!--FOOTER STARTS-->
+         <footer class="footer">
+        <div class="section-container">
+          <div class="col col-lg-3 col-s12">
+            <img
+              src="../Assets/Logo.png"
+              alt="Footer logo"
+              id="footer-logo"
+            />
+            <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, molestias.</p>
+            <div class="social-connect">
+            <a href="https://www.facebook.com"
+              ><i class="fab fa-facebook fa-lg" style="color: #000"></i
+            ></a>
+            <a href="https://www.instagram.com"
+              ><i class="fab fa-instagram fa-lg" style="color: #000"></i
+            ></a>
+            <a href="https://www.linkedin.com"
+              ><i class="fab fa-linkedin fa-lg" style="color: #000"></i
+            ></a>
+            <a href="https://www.twitter.com"
+              ><i class="fab fa-twitter fa-lg" style="color: #000"></i
+            ></a>
+            
+          </div>
+          </div>
+          <div class="col col-lg-3 col-6">
+            <h3>Quick Links</h3>
+            <ul class="quick-links-footer">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./About.html">About</a></li>
+              <li><a href="./Blog.html">Blog</a></li>
+              <li><a href="./Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col col-lg-3 col-sm-6">
+            <h3>Services</h3>
+            <ul class="service-list-footer">
+              <li><a href="./Service_Single.html">SEO Analysis</a></li>
+              <li><a href="./Service_Single.html">Link Building</a></li>
+              <li><a href="./Service_Single.html">SEO Audit</a></li>
+              <li><a href="./Service_Single.html">Keyword Research</a></li>
+              <li><a href="./Service_Single.html">Social Marketing</a></li>
+            </ul>
+          </div>
+          <div class="col col-lg-3 col-6">
+            <div class="email-head mb-3">
+                <p>Subscribe</p>
+                <h5>Subscribe our Newsletter</h5>
+            </div>
+            <div class="email-container">
+                <input type="email" class="email-box mb-3" placeholder="Enter Mail" required><br>
+                <button type="submit" class="btn btn-primary mb-3">Subscirbe</button>
+            </div>
+          </div>
+        </div>
+      </footer>
+        <!--JS SCRIPT-->
+        <script src="../script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
